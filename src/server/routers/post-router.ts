@@ -1,22 +1,22 @@
-import { z } from "zod"
-import { j, publicProcedure } from "../jstack"
+import { z } from 'zod';
+import { j, publicProcedure } from '../jstack';
 
 // Mocked DB
 interface Post {
-  id: number
-  name: string
+  id: number;
+  name: string;
 }
 
 const posts: Post[] = [
   {
     id: 1,
-    name: "Hello World",
+    name: 'Hello World',
   },
-]
+];
 
 export const postRouter = j.router({
   recent: publicProcedure.query(({ c }) => {
-    return c.superjson(posts.at(-1) ?? null)
+    return c.superjson(posts.at(-1) ?? null);
   }),
 
   create: publicProcedure
@@ -25,10 +25,10 @@ export const postRouter = j.router({
       const post: Post = {
         id: posts.length + 1,
         name: input.name,
-      }
+      };
 
-      posts.push(post)
+      posts.push(post);
 
-      return c.superjson(post)
+      return c.superjson(post);
     }),
-})
+});
