@@ -19,7 +19,9 @@ export default function Home() {
     handleInputChange,
     handleSubmit,
     isLoading: isTyping,
-  } = useChat();
+  } = useChat({
+    api: '/api/chat/sendMessage',
+  });
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     handleSubmit(e);
