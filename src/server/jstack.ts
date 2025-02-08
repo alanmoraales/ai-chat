@@ -1,6 +1,7 @@
 import { jstack } from 'jstack';
 
 interface Env {
+  // biome-ignore lint/complexity/noBannedTypes: <jstack setup>
   Bindings: {};
 }
 
