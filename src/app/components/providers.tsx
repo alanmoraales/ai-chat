@@ -1,3 +1,5 @@
+'use client';
+
 import { type PropsWithChildren, useState } from 'react';
 import {
   QueryCache,
