@@ -20,7 +20,11 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/app/components/*", "./src/app/components/ui/*"],
+      "@/utils/*": ["./src/app/utils/*"],
+      "@/hooks/*": ["./src/app/hooks/*"],
+      "@/lib/*": ["./src/app/lib/*"]
     },
     "target": "ES2017"
   },
